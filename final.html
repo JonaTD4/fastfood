@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta FAST FOOD</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <header>
+        <h1>꧁༒☬𝓓𝓔𝓛𝓘𝓒𝓘𝓤𝓢 𝓕𝓐𝓢𝓣 𝓕𝓞𝓞𝓓☬༒꧂</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarSeccion('inicio')">INICIO</a></li>
+                <li><a href="#" onclick="mostrarSeccion('hamburguesas')">HAMBURGUESAS</a></li>
+                <li><a href="#" onclick="mostrarSeccion('pollos')">POLLOS BROASTER</a></li>
+                <li><a href="#" onclick="mostrarSeccion('bebidas')">BEBIDAS</a></li>
+                <li><a href="#" onclick="mostrarSeccion('combos')">COMBOS</a></li>
+                <li><a href="#" onclick="mostrarSeccion('contactos')">CONTACTOS</a></li>
+                <li><a href="#" onclick="mostrarSeccion('carrito')">🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="carousel">
+                <div class="carousel-track">
+                  <img src="Imagenes/fastfood.jpg" alt="Imagen 1">
+                  <img src="Imagenes/ban1o.png" alt="Imagen 2">
+                  <img src="Imagenes/ban4o.jpg" alt="Imagen 3">
+                  <img src="Imagenes/ban2o.jpg" alt="Imagen 4">
+            
+                  <!-- Repetimos para crear efecto infinito -->
+                  <img src="Imagenes/fastfood.jpg" alt="Imagen 1">
+                  <img src="Imagenes/ban1o.png" alt="Imagen 2">
+                  <img src="Imagenes/ban4o.jpg" alt="Imagen 3">
+                  <img src="Imagenes/ban2o.jpg" alt="Imagen 4">
+            
+                </div>
+              </div>
+            <h2>Bienvenido a nuestra tienda " DELICIUS FAST FOOD "</h2>
+            <p>Encuentra los mejores sabores al mejor precio.</p>
+        </section>
+        <section id="hamburguesas" style="display: none;">
+            <h2>HAMBURGUESAS</h2>
+            <ul>
+                <li>
+                    <img src="Imagenes/HamClasica.png" alt="Clasica">
+                    <h3>CLASICA</h3>
+                    <br>Pan-Carne</br>
+                    <br>Queso-Ensalada</br>
+                    <br>Precio: 22.00Bs</br>
+                    <div class="cantidad-control">
+                        <button onclick="modificarCantidad(this, -1)">-</button>
+                        <input type="number" min="0" value="0" class="cantidad" data-nombre="CLASICA" data-precio="22">
+                        <button onclick="modificarCantidad(this, 1)">+</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="Imagenes/HamEspecial.png" alt="Especial">
+                    <h3>ESPECIAL</h3>
+                    <br>Pan-Carne-Queso</br>
+                    <br>Huevo-Ensalada</br>
+                    <br>Precio: 35.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="ESPECIAL" data-precio="35">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+                <li>
+                    <img src="Imagenes/HamHawa.png" alt="Huawai">
+                    <h3>HAWAIANA</h3>
+                    <br>Pan-Carne-Queso</br>
+                    <br>Piña-Ensalada</br>
+                    <br>Precio: 40.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="HAWAIANA" data-precio="40">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+            </ul>
+            <button onclick="agregarSeleccionAlCarrito()">Añadir al Carrito</button>
+        </section>
+        <section id="pollos" style="display: none;">
+            <h2>POLLOS BROASTER</h2>
+            <ul>
+                <li>
+                    <img src="Imagenes/PoEco.png" alt="Eco">
+                    <h3>ECONOMICO</h3>
+                    <br>Pollo 1/4</br>
+                    <br>Arroz-Papa</br>
+                    <br>Precio: 14.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="ECONOMICO" data-precio="14">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+                <li>
+                    <img src="Imagenes/Salchipollo.png" alt="salchi">
+                    <h3>SALCHIPOLLO</h3>
+                    <br>Pollo 1/4-Papas</br>
+                    <br>Salchicha-Arroz</br>
+                    <br>Precio: 35.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="SALCHIPOLLO" data-precio="35">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+                <li>
+                    <img src="Imagenes/PoEnt.png" alt="Entero">
+                    <h3>ENTERO</h3>
+                    <br>Pollo 8 piezas</br>
+                    <br>Papas</br>
+                    <br>Precio: 85.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="ENTERO" data-precio="85">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+            </ul>
+
+            <button onclick="agregarSeleccionAlCarrito()">Añadir al Carrito</button>
+        </section>
+        <section id="bebidas" style="display: none;">
+            <h2>BEBIDAS</h2>
+            <ul>
+                <li>
+                    <img src="Imagenes/CoFaS.png" alt="CoFaS">
+                    <h3>GASEOSAS</h3>
+                    <br>Coca Cola-Fanta-Sprite</br>
+                    <br>Precio: 15.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="GASEOSAS" data-precio="15">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+                <li>
+                    <img src="Imagenes/Aqua.png" alt="Aqua">
+                    <h3>JUGO DE FRUTAS</h3>
+                    <br>Aquarius de Sabores</br>
+                    <br>Precio: 12.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="AQUARIUS JUGO DE FRUTAS" data-precio="12">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+                <li>
+                    <img src="Imagenes/Agua.png" alt="Agua">
+                    <h3>AGUA</h3>
+                    <br>Agua con gas y sin gas</br>
+                    <br>Precio: 7.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="AGUA" data-precio="7">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+            </ul>
+            <button onclick="agregarSeleccionAlCarrito()">Añadir al Carrito</button>
+        </section>
+        <section id="combos" style="display: none;">
+            <h2>COMBOS</h2>
+            <ul>
+                <li>
+                    <img src="Imagenes/HamClasica.png" alt="Clasica">
+                    <h3>CLASIMIX</h3>
+                    <br>2 Hamburguesas Clasicas</br>
+                    <br>1 Gaseosa</br>
+                    <br>Precio: 54.00Bs</br>
+                    <div class="cantidad-control">
+                        <button onclick="modificarCantidad(this, -1)">-</button>
+                        <input type="number" min="0" value="0" class="cantidad" data-nombre="CLASICA" data-precio="22">
+                        <button onclick="modificarCantidad(this, 1)">+</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="Imagenes/PoEco.png" alt="Especial">
+                    <h3>ECODOBLE</h3>
+                    <br>2 Pollos Economicos</br>
+                    <br>1 Aquarius</br>
+                    <br>Precio: 35.00Bs</br>
+                    <div class="cantidad-control">
+                    <button onclick="modificarCantidad(this, -1)">-</button>
+                    <input type="number" min="0" value="0" class="cantidad" data-nombre="ESPECIAL" data-precio="35">
+                    <button onclick="modificarCantidad(this, 1)">+</button>
+                </div>
+                </li>
+                
+            </ul>
+            <button onclick="agregarSeleccionAlCarrito()">Añadir al Carrito</button>
+        </section>
+        <section id="contactos" style="display: none;">
+            <h2>Contactos</h2>
+            <img src="Imagenes/QR.png" alt="QR">
+            <p>Puedes contactarnos al correo: JonaTD@tubuenamigo.com</p>
+            <p><a href="https://wa.me/79302129" target="_blank">Contáctanos por WhatsApp</a></p>
+            <p><a href="https://maps.app.goo.gl/7PZ4ArCchSEqJRzC7" target="_blank">Nuestra ubicación en Google Maps</a></p>
+        </section>
+        <section id="carrito" style="display: none;">
+            <h2>Metodo de Pagos</h2>
+            <img src="Imagenes/QrPagos.jpg" alt="QR">
+            <ul id="lista-carrito"></ul>
+            <p>Total: <span id="total">0.00</span> Bs</p>
+            <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button onclick="confirmarPedido()">Confirmar Pedido</button>
+            
+        </section>
+    </main>
+    <footer>
+        
+        <p>&copy; 2025 Venta de comida Delicius Fast Food JonaTD</p>
+    </footer>
+    <script>
+        let carrito = [];
+
+    function sincronizarContadores() {
+        // Resetear todos los contadores a 0 primero
+        document.querySelectorAll('.cantidad').forEach(input => {
+            input.value = 0;
+        });
+        
+        // Actualizar contadores según lo que hay en el carrito
+        carrito.forEach(item => {
+            const input = document.querySelector(`.cantidad[data-nombre="${item.nombre}"]`);
+            if (input) {
+                input.value = item.cantidad;
+            }
+        });
+    }
+
+    function modificarCantidad(elemento, cambio) {
+        let cantidadControl = elemento.parentNode;
+        let input = cantidadControl.querySelector(".cantidad");
+        let nuevaCantidad = Math.max(0, parseInt(input.value) + cambio);
+        input.value = nuevaCantidad;
+    }
+
+    function mostrarSeccion(seccion) {
+        document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+        document.getElementById(seccion).style.display = 'block';
+    }
+
+    function agregarSeleccionAlCarrito() {
+        document.querySelectorAll('.cantidad').forEach(input => {
+            let cantidad = parseInt(input.value);
+            if (cantidad > 0) {
+                let nombre = input.dataset.nombre;
+                let precio = parseFloat(input.dataset.precio);
+                let producto = carrito.find(item => item.nombre === nombre);
+                if (producto) {
+                    producto.cantidad = cantidad;
+                } else {
+                    carrito.push({ nombre, precio, cantidad });
+                }
+            }
+        });
+        actualizarCarrito();
+        mostrarSeccion('carrito');
+    }
+
+    function actualizarCarrito() {
+        let listaCarrito = document.getElementById('lista-carrito');
+        let total = document.getElementById('total');
+        listaCarrito.innerHTML = '';
+        let sumaTotal = 0;
+
+    carrito.forEach((item, index) => {
+        let li = document.createElement('li');
+        li.innerHTML = `
+            <div class="item-carrito">
+                <span>${item.nombre} - ${item.precio} Bs </span>
+                <div class="cantidad-control">
+                    <button onclick="editarCantidad(${index}, -1)" class="btn-cantidad">-</button>
+                    <input type='number' min='1' value='${item.cantidad}' readonly>
+                    <button onclick="editarCantidad(${index}, 1)" class="btn-cantidad">+</button>
+                </div>
+                <span class="subtotal">= ${(item.precio * item.cantidad).toFixed(2)} Bs</span>
+                <button onclick="eliminarDelCarrito(${index})" class="btn-eliminar">Eliminar</button>
+            </div>
+        `;
+        listaCarrito.appendChild(li);
+        sumaTotal += item.precio * item.cantidad;
+    });
+    
+    total.textContent = sumaTotal.toFixed(2);
+            sincronizarContadores();
+        }
+
+        function editarCantidad(index, cambio) {
+            carrito[index].cantidad = Math.max(1, carrito[index].cantidad + cambio);
+            actualizarCarrito();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
+
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarCarrito();
+        }
+
+        function confirmarPedido() {
+    if (carrito.length === 0) {
+        alert('El carrito está vacío. Agrega productos antes de confirmar el pedido.');
+        return;
+    }
+    
+    let mensaje = "Hola, quiero hacer el siguiente pedido:\n\n";
+    carrito.forEach(item => {
+        mensaje += `✔ ${item.cantidad} x ${item.nombre} - ${(item.precio * item.cantidad).toFixed(2)} Bs\n`;
+    });
+    mensaje += `\n💰 Total: ${document.getElementById('total').textContent} Bs\n`;
+    mensaje += "\n¡Gracias!";
+    
+    // Codificar el mensaje para URL
+    let mensajeCodificado = encodeURIComponent(mensaje);
+    
+    // Tu número de WhatsApp (cambia 79302129 por tu número real con código de país)
+    let numeroWhatsApp = "79302129";
+    
+    // Crear el enlace de WhatsApp
+    let urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+    
+    if (confirm(" Escanee el codigo QR para confirmar el pedido y abrir WhatsApp para adjuntar comprobante!")) {
+        // Abrir WhatsApp en una nueva pestaña
+        window.open(urlWhatsApp, '_blank');
+        vaciarCarrito();
+    }
+}
+
+        function resetearContadores() {
+            document.querySelectorAll('.cantidad').forEach(input => {
+                input.value = 0;
+            });
+        }
+    </script>
+    
+</body>
+</html>

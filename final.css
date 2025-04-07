@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Imagenes/Pared1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+  .carousel {
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: calc(200%); /* 2 grupos de imágenes */
+    animation: scroll 12s linear infinite;
+  }
+  
+  .carousel-track img {
+    width: 25%; /* 4 imágenes visibles */
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); } /* Se mueve la mitad (primer grupo) */
+  }
+  
+header {
+    background-color: transparent;
+    color: red;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+h1 {
+    color: #ff9933; /* Naranja más suave */
+    text-shadow:
+    0 0 5px #333333,
+        0 0 10px #444444,
+        0 0 15px #555555,
+        0 0 20px #666666;
+    font-weight: bold;
+    animation: soft-neon-pulse 2s ease-in-out infinite alternate;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color:black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    background-color: #ff9933;
+}
+
+header nav a {
+    display: inline-block;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    
+    text-align: center; /* Centra el texto en los enlaces */
+    margin-right: 10px; /* Espacio entre botones */
+    
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 280px;
+}
+
+section img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+section img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+#hamburguesas ul li img {
+    width: 240px;
+    height: 180px;
+    display: block;
+    margin: 0;
+}
+#pollos ul li img {
+    width: 240px;
+    height: 180px;
+    display: block;
+    margin: 0;
+}
+
+#bebidas ul li img {
+    width: 280px;
+    height: 200px;
+}
+#contactos {
+    color: black;
+    font-size: 25px;
+}
+#contactos img {
+    width: 220px;
+    height: 180px;
+}
+#contactos a {
+    color: #2f8106; /* Color verde de WhatsApp */
+    font-size: 23px; /* Aumenta el tamaño del enlace */
+    font-weight: bold;
+    text-decoration: none; /* Quita el subrayado */
+}
+section h3 {
+    margin-top: 10px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9933;
+}
+
+footer {
+    color: black;
+    justify-content: center;
+    display: flex;
+}
+#🛒 {
+    color: black;
+    font-size: 25px;
+}
+#carrito img {
+    width: 180px;
+    height: 180px;
+}
+
+#combos img {
+    width: 240px;
+    height: 180px;
+    display: block;
+    margin: 0;
+}
+.cantidad-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.cantidad-control button {
+    background-color: #333333;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cantidad-control button:hover {
+    background-color: #ff9933;
+}
+
+.cantidad-control input {
+    width: 50px;
+    height: 28px;
+    text-align: center;
+    margin: 0 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para los botones de acciones del reporte */
+#acciones-reporte {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.btn-eliminar-todo, .btn-imprimir {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar-todo {
+    background-color: black;
+    color: white;
+}
+
+.btn-imprimir {
+    background-color: black;
+    color: white;
+}
+
+.btn-eliminar-todo:hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+
+.btn-imprimir:hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+
+/* Efecto al hacer clic */
+.btn-eliminar-todo:active, .btn-imprimir:active {
+    transform: scale(0.95);
+}
+
